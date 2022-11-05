@@ -1,94 +1,42 @@
 <template>
   <v-app>
-
-    <v-card
-        class="flex"
-        color="blue darken-4"
-        flat
-        tile
-        elevation="15"
-        dark
-        height="55"
-    >
-      <v-card-title
-          class="justify-xl-center"
-      >
-        <strong class="justify-space-between">
-          راهنمای سامانه های رفع مغایرت بانک مرکزی
-        </strong>
-      </v-card-title>
-
-    </v-card>
-    <v-spacer></v-spacer>
+    <Header />
     <v-main>
-      <router-view/>
-
+      <v-img
+        src="@/assets/Images/CenteralBank.png"
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 0;
+        "
+      />
+      <router-view />
     </v-main>
-    <v-footer
-        dark
-        padless
-
-    >
-      <v-card
-          class="flex"
-          color="blue darken-4"
-          flat
-          tile
-          elevation="15"
-          height="55"
-      >
-        <v-card-title
-            class="justify-xl-center"
-        >
-          <strong class="justify-space-between">
-            در صورت بروز هر گونه مشکل در سامانه با شماره 02172351500 در تماس باشید.
-            <strong>شرکت خدمات انفورماتیک</strong>
-            <v-spacer></v-spacer>
-          </strong>
-        </v-card-title>
-
-      </v-card>
-    </v-footer>
+    <Footer />
   </v-app>
-
 </template>
-<style>
-
-@font-face {
-  font-family: "IRAN Sans";
-  src: url("assets/Css/IRANSans-Regular.otf") format("otd");
-}
-
-div {
-  font-family: "IRAN Sans";
-}
-
-
-</style>
 
 <script>
+import Footer from "@/components/App/Footer";
+import Header from "@/components/App/Header";
+
 export default {
-  name: 'app',
-  data: () => ({
-    isMobile: false
-  }),
-
-  beforeDestroy() {
-    if (typeof window === 'undefined') return
-
-    window.removeEventListener('resize', this.onResize, {passive: true})
-  },
-
-  mounted() {
-    this.onResize()
-
-    window.addEventListener('resize', this.onResize, {passive: true})
-  },
-
-  methods: {
-    onResize() {
-      this.isMobile = window.innerWidth < 600
-    },
-  },
-}
+  name: "app",
+  components: { Header, Footer },
+  data: () => ({}),
+  methods: {},
+};
 </script>
+
+<style>
+/*.background {*/
+/*  background-image: url("./assets/Images/CenteralBank.png");*/
+/*  background-size: cover;*/
+/*  background-repeat: no-repeat;*/
+/*  background-position-y: -150px;*/
+/*  overflow: hidden;*/
+/*}*/
+</style>

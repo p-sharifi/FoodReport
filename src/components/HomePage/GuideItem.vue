@@ -1,0 +1,35 @@
+<template>
+  <v-col cols="12" class="pa-5 d-flex justify-center" md="6">
+    <v-card max-width="390" elevation="12">
+      <v-img :src="image" />
+      <v-card-title>{{ title }}</v-card-title>
+      <v-card-subtitle class="font-weight-bold">{{ subtitle }}</v-card-subtitle>
+      <v-card-actions>
+        <v-btn color="primary" outlined :to="{ name: 'SatnaGuide' }"
+          >راهنما</v-btn
+        >
+        <v-spacer></v-spacer>
+        <v-btn icon @click="showInfo = !showInfo">
+          <v-icon
+            >{{ showInfo ? "mdi-chevron-up" : "mdi-chevron-down" }}
+          </v-icon>
+        </v-btn>
+      </v-card-actions>
+      <v-expand-transition>
+        <div v-show="showInfo">
+          <v-divider></v-divider>
+          <v-card-text>{{ info }}</v-card-text>
+        </div>
+      </v-expand-transition>
+    </v-card>
+  </v-col>
+</template>
+<script>
+export default {
+  name: "GuideItem",
+  props: ["image", "title", "subtitle", "info"],
+  data: () => ({
+    showInfo: false,
+  }),
+};
+</script>

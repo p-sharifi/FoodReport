@@ -5,10 +5,11 @@ import colors from "vuetify/lib/util/colors";
 Vue.use(Vuetify);
 
 export default new Vuetify({
+  rtl: true,
   theme: {
     themes: {
       light: {
-        primary: colors.cyan.darken3,
+        primary: colors.blue.darken4,
         btnPrimary: colors.cyan.darken1,
         mainBackgroundColor: colors.grey.lighten2,
         backgroundColor: colors.grey.lighten4,
