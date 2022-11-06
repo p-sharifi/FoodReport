@@ -32,11 +32,5 @@ export default {
 </script>
 
 <style>
-/*.background {*/
-/*  background-image: url("./assets/Images/CenteralBank.png");*/
-/*  background-size: cover;*/
-/*  background-repeat: no-repeat;*/
-/*  background-position-y: -150px;*/
-/*  overflow: hidden;*/
-/*}*/
+
 </style>
