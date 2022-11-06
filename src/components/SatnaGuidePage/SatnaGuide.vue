@@ -1,6 +1,5 @@
 <template>
   <v-container>
-    <v-spacer />
     <ToolbarDesc
       title="راهنمای کاربری سامانه رفع مغایرت ساتنا"
       first-tab="نحوه ورود به سامانه"

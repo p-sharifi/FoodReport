@@ -1,5 +1,9 @@
 # isc-chakavak-guide
 
+## Icons Cheatsheet
+
+https://pictogrammers.github.io/@mdi/font/6.9.96/
+
 ## Project setup
 ```
 yarn install
