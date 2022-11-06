@@ -1,0 +1,9 @@
+$body-font-family: IRANSansP, IRANSans, serif;
+$btn-letter-spacing: 'normal';
+
+.v-application {
+  font-family: $body-font-family !important;
+  .title {
+    font-family: $body-font-family !important;
+  }
+}
