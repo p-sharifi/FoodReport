@@ -1,11 +1,11 @@
 <template>
   <v-col cols="12" class="pa-5 d-flex justify-center" md="6">
-    <v-card max-width="390" elevation="12">
+    <v-card max-width="390" elevation="12" color="light-blue lighten-5">
       <v-img :src="image" />
-      <v-card-title>{{ title }}</v-card-title>
+      <v-card-title class="font-weight-bold">{{ title }}</v-card-title>
       <v-card-subtitle class="font-weight-bold">{{ subtitle }}</v-card-subtitle>
       <v-card-actions>
-        <v-btn color="primary" outlined :to="{ name: 'SatnaGuide' }"
+        <v-btn color="indigo darken-4" outlined :to="{ name: 'SatnaGuide' }"
           >راهنما</v-btn
         >
         <v-spacer></v-spacer>
