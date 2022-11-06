@@ -4,7 +4,7 @@
       class="mx-auto"
       max-width="200"
       max-height="200"
-      src="@/assets/Logo/logo.png"
+      src="@/assets/logo/logo.png"
       contain
       height="80"
       style="top: 0; left: auto; right: auto"
@@ -30,28 +30,27 @@ export default {
   components: { GuideItem },
   data: () => ({
     guidItems: [
-
       {
         title: "رفع مغایرت چکاوک",
-        image: require("@/assets/Images/chakavak.png"),
+        image: require("@/assets/images/chakavak.png"),
         info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت چکاوک بین بانک ها",
         subtitle: "راهنمای کاربری سامانه چکاوک",
       },
       {
         title: " رفع مغایرت ساتنا",
-        image: require("@/assets/Images/Satna.jpg"),
+        image: require("@/assets/images/Satna.jpg"),
         info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت ساتنا بین بانک ها",
         subtitle: "راهنمای کاربری سامانه ساتنا",
       },
       {
         title: " رفع مغایرت پایا",
-        image: require("@/assets/Images/Paya.png"),
+        image: require("@/assets/images/Paya.png"),
         info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت پایا بین بانک ها",
         subtitle: "راهنمای کاربری سامانه پایا",
       },
       {
         title: " رفع مغایرت پل",
-        image: require("@/assets/Images/Samane-Pol.jpg"),
+        image: require("@/assets/images/Samane-Pol.jpg"),
         info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت پل بین بانک ها",
         subtitle: "راهنمای کاربری سامانه پل",
       },
@@ -60,9 +59,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.CardColor{
-  color:azure;
-}
-
-</style>
+<style scoped></style>
