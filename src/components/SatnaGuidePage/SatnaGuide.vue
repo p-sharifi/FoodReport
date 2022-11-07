@@ -1,22 +1,37 @@
 <template>
   <v-container>
-    <ToolbarDesc
-      title="راهنمای کاربری سامانه رفع مغایرت ساتنا"
-      first-tab="نحوه ورود به سامانه"
-      second-tab="ارسال مغایرت و بررسی توسط بانک مبدا"
-      third-tab="دریافت مغایرت بانک مقصد از بانک مبدا و پیگیری"
-      first-p-desc="ورود به سیستم"
-      second-p-desc="ثبت مغایرت و بررسی توسط رئیس مبدا"
-      third-p-desc="بررسی مغایرت توسط رییس مقصد"
-    />
+    <ToolbarDesc :tabs="tabs" :title="title" />
   </v-container>
 </template>
 
 <script>
 import ToolbarDesc from "../App/ToolbarDesc";
+import HowToLoginDescription from "@/components/SatnaGuidePage/HowToLoginDescription";
+import SourceConflict from "@/components/SatnaGuidePage/SourceConflict";
+import DestinationConflict from "@/components/SatnaGuidePage/DestinationConflict";
 export default {
   name: "SatnaGuide",
   components: { ToolbarDesc },
+  data: () => ({
+    title: "راهنمای کاربری سامانه رفع مغایرت ساتنا",
+    tabs: [
+      {
+        title: "نحوه ورود به سامانه",
+        icon: "mdi-account",
+        content: HowToLoginDescription,
+      },
+      {
+        title: "ارسال مغایرت و بررسی توسط بانک مبدا",
+        icon: "mdi-lock",
+        content: SourceConflict,
+      },
+      {
+        title: "دریافت مغایرت بانک مقصد از بانک مبدا و پیگیری",
+        icon: "mdi-access-point",
+        content: DestinationConflict,
+      },
+    ],
+  }),
 };
 </script>
 
