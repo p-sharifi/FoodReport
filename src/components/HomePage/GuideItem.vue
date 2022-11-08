@@ -27,10 +27,7 @@
 <script>
 export default {
   name: "GuideItem",
-  props: ["image",
-          "title",
-          "subtitle",
-          "info"],
+  props: ["image", "title", "subtitle", "info"],
   data: () => ({
     showInfo: false,
   }),
