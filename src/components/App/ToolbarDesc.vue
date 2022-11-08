@@ -28,12 +28,34 @@
 </template>
 
 <script>
+import HowToLoginDescription from "../SatnaGuidePage/HowToLoginDescription";
+import SourceConflict from "../SatnaGuidePage/SourceConflict";
+import DestinationConflict from "../SatnaGuidePage/DestinationConflict";
 export default {
   name: "ToolbarDesc",
-  props: ["tabs", "title"],
+  props: ["tab.icon", "tab.title","title","tab.content"],
   data: () => ({
     tab: "",
     show: false,
+    tabs:[{
+      title:'نحوه ورود به سامانه',
+      icon:'mdi-login-variant',
+      content: HowToLoginDescription
+  },
+      {
+        title: 'ثبت و بررسی مغایرت توسط بانک مبدا',
+        icon:'mdi-pencil-box-multiple-outline',
+        content:SourceConflict
+
+      },
+      {
+        title: 'بررسی مغایرت توسط بانک مقصد',
+        icon:'mdi-credit-card-search-outline',
+        content: DestinationConflict
+      }
+
+      ]
+
   }),
 };
 </script>
