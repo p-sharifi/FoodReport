@@ -2,7 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/HomePage";
 
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -14,14 +13,13 @@ const routes = [
   {
     path: "/SatnaGuide",
     name: "SatnaGuide",
-
+    component: () => import("../views/SatnaGuidePage")
   },
-
   {
-    component: () => [import("../views/SatnaGuidePage"),
-    ]
-
-  },
+    path:"/ChakavakGuide",
+    name:"ChakavakGuide",
+    component: () => import("../views/ChakavakGuidePage")
+  }
 ];
 
 const router = new VueRouter({

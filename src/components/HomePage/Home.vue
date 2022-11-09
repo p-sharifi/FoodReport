@@ -36,28 +36,28 @@ export default {
         image: require("@/assets/images/chakavak/chakavak.png"),
         info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت چکاوک بین بانک ها",
         subtitle: "راهنمای کاربری سامانه چکاوک",
-        name:"chakavkGuide"
+        name: "ChakavakGuide",
       },
       {
         title: " رفع مغایرت ساتنا",
         image: require("@/assets/images/satna/Satna.jpg"),
         info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت ساتنا بین بانک ها",
         subtitle: "راهنمای کاربری سامانه ساتنا",
-        name:"SatnaGuide"
+        name: "SatnaGuide",
       },
       {
         title: " رفع مغایرت پایا",
         image: require("@/assets/images/paya/Paya.png"),
         info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت پایا بین بانک ها",
         subtitle: "راهنمای کاربری سامانه پایا",
-        name:""
+        name: "",
       },
       {
         title: " رفع مغایرت پل",
         image: require("@/assets/images/pol/Samane-Pol.jpg"),
         info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت پل بین بانک ها",
         subtitle: "راهنمای کاربری سامانه پل",
-        name:""
+        name: "",
       },
     ],
   }),
