@@ -5,7 +5,7 @@
       <v-card-title class="font-weight-bold">{{ title }}</v-card-title>
       <v-card-subtitle class="font-weight-bold">{{ subtitle }}</v-card-subtitle>
       <v-card-actions>
-        <v-btn color="indigo darken-4" outlined :to="{ name: 'SatnaGuide' }"
+        <v-btn color="indigo darken-4" outlined :to="{ name }"
           >راهنما</v-btn
         >
         <v-spacer></v-spacer>
@@ -27,7 +27,7 @@
 <script>
 export default {
   name: "GuideItem",
-  props: ["image", "title", "subtitle", "info"],
+  props: ["image", "title", "subtitle", "info","name"],
   data: () => ({
     showInfo: false,
   }),

@@ -1,6 +1,9 @@
 <template>
   <v-container>
-    <ToolbarDesc :title="title" :tabs="childTabs" />
+    <ToolbarDesc
+    :title="title"
+    :tabs="tabs"
+    />
   </v-container>
 </template>
 
@@ -15,7 +18,7 @@ export default {
   components: { ToolbarDesc },
   data: () => ({
     title: "راهنمای کاربری سامانه ساتنا",
-    childTabs: [
+    tabs: [
       {
         title: "نحوه ورود به سامانه",
         icon: "mdi-login-variant",
