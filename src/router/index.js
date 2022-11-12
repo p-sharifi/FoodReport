@@ -3,7 +3,6 @@ import VueRouter from "vue-router";
 import Home from "../views/HomePage";
 
 Vue.use(VueRouter);
-
 const routes = [
   {
     path: "/",
@@ -21,11 +20,9 @@ const routes = [
     component: () => import("../views/ChakavakGuidePage"),
   },
 ];
-
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
 });
-
 export default router;

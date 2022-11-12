@@ -1,14 +1,12 @@
 <template>
-  <ChakavakGuide />
+  <ChakavakGuide/>
 </template>
-
 <script>
 import ChakavakGuide from "../components/ChakavakGuidePage/ChakavakGuide";
 
 export default {
   name: "ChakavakGuidePage",
-  components: { ChakavakGuide },
+  components: {ChakavakGuide},
 };
 </script>
-
 <style scoped></style>

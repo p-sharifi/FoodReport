@@ -3,7 +3,8 @@
     <v-dialog v-model="show" max-width="80%" @keyup.esc="show = false">
       <v-card>
         <v-btn @click="show = false" icon><v-icon>mdi-close</v-icon></v-btn>
-        <v-img :src="src" alt="image" contain />
+        <v-img
+            :src="src" alt="image" contain />
       </v-card>
     </v-dialog>
     <v-img
@@ -28,5 +29,6 @@ export default {
 <style scoped>
 .image:hover {
   cursor: pointer;
+  padding-top: 5px;
 }
 </style>
