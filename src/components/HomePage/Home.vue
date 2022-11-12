@@ -17,7 +17,7 @@
         :image="guideItem.image"
         :info="guideItem.info"
         :subtitle="guideItem.subtitle"
-        :name="guideItem.name"
+        :to="guideItem.to"
       />
     </v-row>
   </v-container>
@@ -36,14 +36,14 @@ export default {
         image: require("@/assets/images/chakavak/chakavak.png"),
         info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت چکاوک بین بانک ها",
         subtitle: "راهنمای کاربری سامانه چکاوک",
-        name: "ChakavakGuide",
+        to: "/ChakavakGuide",
       },
       {
         title: " رفع مغایرت ساتنا",
         image: require("@/assets/images/satna/Satna.jpg"),
         info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت ساتنا بین بانک ها",
         subtitle: "راهنمای کاربری سامانه ساتنا",
-        name: "SatnaGuide",
+        to: "/SatnaGuide",
       },
       {
         title: " رفع مغایرت پایا",

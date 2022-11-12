@@ -13,13 +13,13 @@ const routes = [
   {
     path: "/SatnaGuide",
     name: "SatnaGuide",
-    component: () => import("../views/SatnaGuidePage")
+    component: () => import("../views/SatnaGuidePage"),
   },
   {
-    path:"/ChakavakGuide",
-    name:"ChakavakGuide",
-    component: () => import("../views/ChakavakGuidePage")
-  }
+    path: "/ChakavakGuide",
+    name: "ChakavakGuide",
+    component: () => import("../views/ChakavakGuidePage"),
+  },
 ];
 
 const router = new VueRouter({

@@ -1,9 +1,6 @@
 <template>
   <v-container>
-    <ToolbarDesc
-    :title="title"
-    :tabs="tabs"
-    />
+    <ToolbarDesc :title="title" :tabs="tabs" />
   </v-container>
 </template>
 
