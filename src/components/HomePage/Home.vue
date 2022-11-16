@@ -1,23 +1,23 @@
 <template>
   <v-container>
     <v-img
-      class="mx-auto"
-      max-width="200"
-      max-height="200"
-      src="@/assets/logo/logo.png"
-      contain
-      height="80"
-      style="top: 0; left: auto; right: auto"
+        class="mx-auto"
+        max-width="200"
+        max-height="200"
+        src="@/assets/logo/logo.png"
+        contain
+        height="80"
+        style="top: 0; left: auto; right: auto"
     />
     <v-row class="mt-4" dense>
       <GuideItem
-        v-for="guideItem in guidItems"
-        :key="guideItem.title"
-        :title="guideItem.title"
-        :image="guideItem.image"
-        :info="guideItem.info"
-        :subtitle="guideItem.subtitle"
-        :to="guideItem.to"
+          v-for="guideItem in guideItems"
+          :key="guideItem.title"
+          :title="guideItem.title"
+          :image="guideItem.image"
+          :info="guideItem.info"
+          :subtitle="guideItem.subtitle"
+          :to="guideItem.to"
       />
     </v-row>
   </v-container>
@@ -28,9 +28,9 @@ import GuideItem from "@/components/HomePage/GuideItem";
 
 export default {
   name: "Home",
-  components: { GuideItem },
+  components: {GuideItem},
   data: () => ({
-    guidItems: [
+    guideItems: [
       {
         title: "رفع مغایرت چکاوک",
         image: require("@/assets/images/chakavak/chakavak.png"),
