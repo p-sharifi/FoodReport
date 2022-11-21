@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <ToolbarDesc :title="title" :tabs="tabs" />
+    <ToolbarDesc :title="title" :tabs="tabs"/>
   </v-container>
 </template>
 
@@ -9,10 +9,11 @@ import ToolbarDesc from "../App/ToolbarDesc";
 import HowToLogin from "./HowToLogin";
 import SourceBank from "./SourceBank";
 import DestinationBank from "./DestinationBank";
+import AdminGuide from "./AdminGuide";
 
 export default {
   name: "ChakavakGuide",
-  components: { ToolbarDesc },
+  components: {ToolbarDesc},
   data: () => ({
     title: "راهنمای کاربری سامانه چکاوک",
     tabs: [
@@ -30,6 +31,12 @@ export default {
         title: "بررسی مغایرت توسط بانک مقصد",
         icon: "mdi-credit-card-search-outline",
         content: DestinationBank,
+      },
+      {
+        title: "راهنمای راهبر سامانه",
+        icon: "mdi-folder-account-outline",
+        content: AdminGuide,
+
       },
     ],
   }),
