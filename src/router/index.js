@@ -9,16 +9,6 @@ const routes = [
     name: "Home",
     component: Home,
   },
-  {
-    path: "/SatnaGuide",
-    name: "SatnaGuide",
-    component: () => import("../views/SatnaGuidePage"),
-  },
-  {
-    path: "/ChakavakGuide",
-    name: "ChakavakGuide",
-    component: () => import("../views/ChakavakGuidePage"),
-  },
 ];
 const router = new VueRouter({
   mode: "history",

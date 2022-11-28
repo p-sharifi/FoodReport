@@ -1,63 +1,157 @@
 <template>
-  <v-container>
-    <v-img
-        class="mx-auto"
-        max-width="200"
-        max-height="200"
-        src="@/assets/logo/logo.png"
-        contain
-        height="80"
-        style="top: 0; left: auto; right: auto"
-    />
-    <v-row class="mt-4" dense>
-      <GuideItem
-          v-for="guideItem in guideItems"
-          :key="guideItem.title"
-          :title="guideItem.title"
-          :image="guideItem.image"
-          :info="guideItem.info"
-          :subtitle="guideItem.subtitle"
-          :to="guideItem.to"
+  <v-container fluid>
+
+    <v-row class="mt-2" dense>
+      <CardItem
+          v-for="cardItem in cardItems"
+          :key="cardItem.personnelName"
+          :personnelName="cardItem.personnelName"
+          :image="cardItem.image"
+          :personnelCode="cardItem.personnelCode"
+          :foodName="cardItem.foodName"
+          :counter="cardItem.counter"
       />
     </v-row>
   </v-container>
 </template>
 
 <script>
-import GuideItem from "@/components/HomePage/GuideItem";
+
+
+import CardItem from "@/components/HomePage/CardItem";
 
 export default {
   name: "Home",
-  components: {GuideItem},
+  components: {CardItem},
   data: () => ({
-    guideItems: [
+    cardItems: [
       {
-        title: "رفع مغایرت چکاوک",
-        image: require("@/assets/images/chakavak/chakavak.png"),
-        info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت چکاوک بین بانک ها",
-        subtitle: "راهنمای کاربری سامانه چکاوک",
-        to: "/ChakavakGuide",
+        personnelName: "نگار دادگری",
+        image: require("@/assets/images/Users/11.jpg"),
+        personnelCode:"3691",
+        foodName:"باقالی پلو با ماهیچه",
+        counter:"1"
       },
       {
-        title: " رفع مغایرت ساتنا",
-        image: require("@/assets/images/satna/Satna.jpg"),
-        info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت ساتنا بین بانک ها",
-        subtitle: "راهنمای کاربری سامانه ساتنا",
-        to: "/SatnaGuide",
+        image: require("@/assets/images/Users/1.jpg"),
+        personnelName:"مانی رضایی",
+        personnelCode:"3698",
+        foodName:"باقالی پلو با ماهیچه",
+        counter:"2"
+
       },
       {
-        title: " رفع مغایرت پایا",
-        image: require("@/assets/images/paya/Paya.png"),
-        info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت پایا بین بانک ها",
-        subtitle: "راهنمای کاربری سامانه پایا",
-        name: "",
+
+        image: require("@/assets/images/Users/9.jpg"),
+        personnelName:"پریسا شریفی",
+        personnelCode:"3217",
+        foodName:"چلو مرغ شکم پر",
+        counter:"3"
       },
       {
-        title: " رفع مغایرت پل",
-        image: require("@/assets/images/pol/Samane-Pol.jpg"),
-        info: "عودت و استرداد اشتباه واریزی و موارد مختلف مغایرت پل بین بانک ها",
-        subtitle: "راهنمای کاربری سامانه پل",
-        name: "",
+        image: require("@/assets/images/Users/8.jpg"),
+        personnelName:"نیما شریفی",
+        personnelCode:"3218",
+        foodName:"کته کباب ترش",
+        counter:"4"
+      },
+      {
+        image: require("@/assets/images/Users/5.png"),
+        personnelName:"سمانه زارع",
+        personnelCode:"3838",
+        foodName:"پلو تن",
+        counter:"5"
+      },
+      {
+        image: require("@/assets/images/Users/1.jpg"),
+        personnelName:"سهیلا قشقاوی",
+        personnelCode:"3174",
+        foodName:"لوبیا پلو",
+        counter:"6"
+      },
+      {
+        image: require("@/assets/images/Users/7.png"),
+        personnelName:"مطهره بازرگانی",
+        personnelCode:"3362",
+        foodName:"چلو خورشت قیمه",
+        counter:"7"
+      },
+      {
+        image: require("@/assets/images/Users/6.jpg"),
+        personnelName:"عباس زینالی",
+        personnelCode:"2041",
+        foodName:"کوکو سیب زمینی",
+        counter:"8"
+      },
+      {
+        image: require("@/assets/images/Users/3.jpg"),
+        personnelName:"مهدی شریفی",
+        personnelCode:"3141",
+        foodName:"ماکارونی",
+        counter:"9"
+      },
+      {
+        image: require("@/assets/images/Users/4.png"),
+        personnelName:"مسعود قدیمی",
+        personnelCode:"3991",
+        foodName:"چلو خورشت قرمه سبزی",
+        counter:"10"
+      },
+      {
+        image: require("@/assets/images/Users/13.png"),
+        personnelName:"احمد احمدی",
+        personnelCode:"3065",
+        foodName:"زرشک پلو با مرغ",
+        counter:"11"
+      },
+      {
+        image: require("@/assets/images/Users/10.jpg"),
+        personnelName:"رضا قویدل",
+        personnelCode:"3525",
+        foodName:"خوراک جوجه کباب",
+        counter:"12"
+      },
+      {
+        image: require("@/assets/images/Users/13.png"),
+        personnelName:"احمد احمدی",
+        personnelCode:"3065",
+        foodName:"زرشک پلو با مرغ",
+        counter:"11"
+      },
+      {
+        image: require("@/assets/images/Users/10.jpg"),
+        personnelName:"رضا قویدل",
+        personnelCode:"3525",
+        foodName:"خوراک جوجه کباب",
+        counter:"12"
+      },
+      {
+        image: require("@/assets/images/Users/4.png"),
+        personnelName:"مسعود قدیمی",
+        personnelCode:"3991",
+        foodName:"چلو خورشت قرمه سبزی",
+        counter:"10"
+      },
+      {
+        image: require("@/assets/images/Users/13.png"),
+        personnelName:"احمد احمدی",
+        personnelCode:"3065",
+        foodName:"زرشک پلو با مرغ",
+        counter:"11"
+      },
+      {
+        image: require("@/assets/images/Users/4.png"),
+        personnelName:"مسعود قدیمی",
+        personnelCode:"3991",
+        foodName:"چلو خورشت قرمه سبزی",
+        counter:"10"
+      },
+      {
+        image: require("@/assets/images/Users/13.png"),
+        personnelName:"احمد احمدی",
+        personnelCode:"3065",
+        foodName:"زرشک پلو با مرغ",
+        counter:"11"
       },
     ],
   }),
