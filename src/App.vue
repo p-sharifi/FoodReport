@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main class="indigo darken-2">
+    <v-main class="indigo darken-4">
 
       <router-view />
     </v-main>
