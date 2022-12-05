@@ -1,28 +1,45 @@
 <template>
-  <v-col cols="12" class="pa-2 d-flex justify-center" md="2">
-    <v-card
-      width="300"
-      height="300"
-      elevation="20"
-      color="blue lighten-5"
+  <v-card
+    class="mx-auto"
+    style="position: relative"
+    max-width="344"
+    height="250"
+    outlined
+  >
+    <v-list-item three-line>
+      <v-list-item-content>
+        <div class="text-body-2 mb-4">۱۲ آذر ۱۴۰۱</div>
+        <v-list-item-title class="text-body-1 mb-1 text-wrap">
+          {{ personnelName }}
+        </v-list-item-title>
+        <v-list-item-subtitle>{{ personnelCode }}</v-list-item-subtitle>
+        <v-list-item-title class="text-body-1 mb-1 text-wrap mt-3">
+        </v-list-item-title>
+        <v-list-item-title class="text-body-1 mb-1 text-wrap mt-3">
+          ساختمون
+        </v-list-item-title>
+      </v-list-item-content>
+      <v-list-item-avatar size="100" color="white">
+        <v-img
+          :src="image"
+          height="100px"
+          width="150px"
+          contain
+          class="d-flex flex-row-reverse"
+        />
+      </v-list-item-avatar>
+    </v-list-item>
+
+    <v-card-actions>
+      {{ foodName }}
+    </v-card-actions>
+    <v-chip
+      style="position: absolute; bottom: 6px; left: 6px"
+      color="secondary"
     >
-      <div>
-        <v-img :src="image"  height="100px" width="150px" contain class="mx-auto"/>
-      </div>
-      <v-card-title class="type">{{ personnelName }}</v-card-title>
-      <v-divider />
-      <v-card-subtitle class="type text-center">{{
-        personnelCode
-      }}</v-card-subtitle>
-      <v-card-text class="type text-center">{{ foodName }} </v-card-text>
-      <v-card-actions>
-        <v-chip color="green" text-color="white" label>
-          {{ counter }}
-          <v-icon right> mdi-food-fork-drink </v-icon>
-        </v-chip>
-      </v-card-actions>
-    </v-card>
-  </v-col>
+      {{ counter }}
+    </v-chip>
+  </v-card>
 </template>
 <script>
 export default {
@@ -39,5 +56,4 @@ export default {
   justify-items: center !important;
   color: black;
 }
-
 </style>
